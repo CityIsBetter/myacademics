@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mahesh Paul - My Academics</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Mahesh Paul</a>
+        <ul>
+            <li><a href="https://cityisbetter.github.io/maheshpaul">Home</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars">
+        <img src="img/moon.png" id="moon">
+        <img src="img/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">My Academics</h2>
+        <img src="img/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec">
+        <h2><u>My school</u></h2>
+        <p>I studied in <b>Thamarai Internation School</b> till 3rd grade and joined
+         <b>Yagappa Internation School</b> from 4th and completed rest of my schooling
+          in Yagappa. </p>
+        <h2><u>My Scores</u></h2>
+        <p><b>I studied cambridge syllabus till 8th grade</b> and here are my scores in 8th
+            grade checkpoint exam, which i wrote in 2018.
+            <br><br>
+        <u>Maths</u> - 6/6<br>
+        <u>Science</u> - 5/6<br>
+        <u>English</u> - 2.1/6 ...pretty bad right :( <br><br>
+     <b>In 10th grade I studied Matriculation syllabus</b>, which is stateboard. <br><br>
+    I got totally <b><u>408/500</u></b> in my 10th stateboard exam (which I didnt write
+     because of covid, these marks were taken from school tests)
+     <br><br>
+     In 12th grade, after having an enitre year in online class in 11th grade, we were back to school, it was difficult
+     but I think I did pretty well.<br><br>
+     I totally scored <b><u>505/600</u></b> in my 12th grade final stateboard exam.
+    </p>
+    </div>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text')
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
